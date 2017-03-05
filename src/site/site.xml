@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="Imixs Open Source Workflow">
+
+	<skin>
+		<groupId>org.imixs.workflow</groupId>
+		<artifactId>imixs-workflow-maven-skin</artifactId>
+		<version>1.3.0</version>
+	</skin>
+
+
+	<body>
+		<!-- 
+		<links>
+			<item name="Home" href="http://www.imixs.org/" />
+			<item name="Quick Start" href="index.html" />
+			<item name="Workflow Engine" href="http://www.imixs.org/jee/" />
+			<item name="XML &amp; WebServices" href="http://www.imixs.org/xml/" />
+			<item name="Web Tools" href="http://www.imixs.org/jsf/" />
+			<item name="Modelling" href="modelling/index.html" />
+			<item name="Script!" href="http://www.imixs.org/script/" />
+		</links>
+		 -->
+
+
+		<menu name="Documentation">
+			<item name="Quick Start" href="index.html" collapse="true">
+				<item name="Business Data" href="quickstart/workitem.html" />
+				<item name="Business Process" href="quickstart/businessprocess.html" />
+				<item name="Workflow Engine" href="quickstart/workflowengine.html" />
+			</item>
+
+			<item name="BPMN Modeling" href="modelling/index.html" collapse="true">
+				<item name="Overview" href="modelling/overview.html" />
+				<item name="Installation" href="modelling/install.html" />
+				<item name="Eclipse Workbench" href="modelling/eclipse_workbench.html" />
+				<item name="Creating a Model" href="modelling/create_model.html" />
+				<item name="How to Model a Workflow" href="modelling/howto.html" />
+				<item name="Process Properties" href="modelling/main_editor.html" />
+				<item name="Task Properties" href="modelling/process.html" />
+				<item name="Event Properties" href="modelling/activities.html" />
+				<item name="Text Replacement" href="modelling/textreplacement.html" />
+				<item name="Reports" href="modelling/report_plugin.html" />
+				<item name="Deployment" href="modelling/deployment.html" />
+
+			</item>
+
+
+			<item name="Core API" href="core/index.html" collapse="true">
+				<item name="ItemCollection" href="core/itemcollection.html" />
+				<item name="Model" href="core/model.html" />
+				<item name="Plug-in API" href="core/plugin-api.html" />
+				<item name="WorkflowKernel" href="core/workflowkernel.html" />
+				<item name="WorkflowManager" href="core/workflowmanager.html" />
+				<item name="XML" href="core/xml/index.html" collapse="true">
+					<item name="Transform data" href="core/xml/transform_xml.html" />
+					<item name="Post data" href="core/xml/post_xml.html" />
+					<item name="Marshaling" href="core/xml/marshal.html" />
+				</item>
+			</item>
+
+			<item name="Workflow Engine" href="./engine/index.html"
+				collapse="true">
+				<item name="DocumentService" href="./engine/documentservice.html"
+					collapse="true">
+					<item name="Access Control" href="./engine/acl.html" />
+					<item name="Lucene" href="./engine/luceneservice.html" />
+					<item name="Query Syntax" href="./engine/queries.html" />
+				</item>
+				<item name="ModelService" href="./engine/modelservice.html" />
+				<item name="WorkflowService" href="./engine/workflowservice.html" />
+				
+				<item name="Plugins" href="./engine/plugins/index.html"
+					collapse="true">
+					<item name="Application Plugin" href="./engine/plugins/applicationplugin.html" />
+					<item name="Result Plugin" href="./engine/plugins/resultplugin.html" />
+					<item name="History Plugin" href="./engine/plugins/historyplugin.html" />
+					<item name="Access Plugin" href="./engine/plugins/accessplugin.html" />
+					<item name="Analysis Plugin" href="./engine/plugins/analysisplugin.html" />
+					<item name="Rule Plugin" href="./engine/plugins/ruleplugin.html" />
+					<item name="Mail Plugin" href="./engine/plugins/mailplugin.html" />
+					<item name="Interval Plugin" href="./engine/plugins/intervalplugin.html" />
+					<item name="Split &amp; Join" href="./engine/plugins/splitandjoinplugin.html" />
+					<item name="Version Plugin" href="./engine/plugins/versionplugin.html" />
+					<item name="Exception handling" href="./engine/plugins/exception_handling.html" />
+				</item>
+
+
+				<item name="Scheduler" href="./engine/scheduler.html" />
+				<item name="PropertyService" href="./engine/propertyservice.html" />
+				<item name="Remote EJB Lookup" href="./engine/remote_lookup.html" />
+
+			</item>
+
+			<item name="REST API" href="./restapi/index.html" collapse="true">
+				<item name="Workflow Service" href="./restapi/workflowservice.html" />
+				<item name="Model Service" href="./restapi/modelservice.html" />
+				<item name="Report Service" href="./restapi/reportservice.html" collapse="true">
+				<item name="XSLT" href="./restapi/xslt.html" />
+				</item>
+				<item name="Document Service" href="./restapi/documentservice.html" />
+				<item name="JSON" href="./restapi/json.html" />
+			</item>
+
+		
+
+			<item name="JSF Components" href="./webtools/index.html"  collapse="true">
+
+				<item name="jQuery" href="./webtools/header.html" />
+				<item name="ImixsWorkflowActions" href="./webtools/workflowactions.html" />
+				<item name="DatePicker" href="./webtools/datepicker.html" />
+				<item name="Controller" href="./webtools/controller.html" />
+				<item name="FileUpload" href="./webtools/fileupload.html" />
+				<item name="Tooltip" href="./webtools/tooltip.html" />
+				<item name="Examples" href="./webtools/examples.html" />
+			</item>
+
+			<item name="JavaScript" href="./javascript/index.html"  collapse="true">
+				<item name="Documents" href="./javascript/documents.html" />
+				<item name="XML" href="./javascript/xml.html" />
+				<item name="Layout / UI" href="./javascript/layout.html" />
+			</item>
+
+			<item name="Deployment" href="./deployment/index.html" collapse="true">
+				<item name="Deployment Guide" href="./deployment/deployment_guide.html" />
+				<item name="WildFly" href="./deployment/wildfly.html" />
+				<item name="GlassFish" href="./deployment/glassfish.html" />
+				<item name="Database Schema" href="./deployment/database_schema.html" />
+				<item name="Security" href="./deployment/security.html" />
+				<item name="Concurrency" href="./deployment/concurrency.html" />
+			</item>
+
+			<item name="Sample Application" href="./sampleapplication.html" />
+			<item name="Administration" href="./administration.html" />
+			<item name="Testing" href="./testing.html" />
+			<item name="Docker" href="./docker.html" />
+			<item name="Maven" href="./maven.html" />
+
+			<item name="JavaDocs" target="_blank" href="./apidocs/index.html" />
+		</menu>
+
+		<menu name="About the Project">
+			<item name="Goals" href="goals.html" />
+			<!-- <item name="Project Summary" href="project-summary.html"/> -->
+			<item name="Project License" href="license.html" />
+			<item name="Issue Tracking" href="issue-tracking.html" />
+			<item name="Dependencies" href="dependencies.html" />
+			<item name="Plugin Management" href="plugin-management.html" />
+		</menu>
+
+		<menu name="Earlier Releases">
+			<item name="3.x" href="../doc_3_9/index.html" />
+		</menu>
+
+
+	</body>
+
+</project>

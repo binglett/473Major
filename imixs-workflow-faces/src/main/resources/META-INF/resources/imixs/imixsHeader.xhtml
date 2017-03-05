@@ -1,0 +1,88 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:cc="http://java.sun.com/jsf/composite"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<!-- INTERFACE -->
+<cc:interface>
+
+	<cc:attribute name="disablecss" default="false"
+		type="java.lang.Boolean"></cc:attribute>
+
+	<cc:attribute name="disablejquery" default="false"
+		type="java.lang.Boolean"></cc:attribute>
+
+	<cc:attribute name="disablefileupload" default="false"
+		type="java.lang.Boolean"></cc:attribute>
+
+	<cc:attribute name="dateformat" default="yyyy-MM-dd"
+		type="java.lang.String"></cc:attribute>
+		
+	<cc:attribute name="build" default=""
+		type="java.lang.String"></cc:attribute>
+
+	<cc:attribute name="theme"
+		default="#{facesContext.externalContext.requestContextPath}/imixs/jquery/themes/imixs/jquery-ui-1.10.0.custom.css" />
+
+</cc:interface>
+
+<!-- IMPLEMENTATION -->
+<cc:implementation>
+	<c:if test="#{!cc.attrs.disablejquery}">
+		<script type="text/javascript"
+			src="#{facesContext.externalContext.requestContextPath}/imixs/jquery/jquery-1.9.0.js"></script>
+	</c:if>
+
+	<!-- Theme: #{cc.attrs.theme} disabled:#{cc.attrs.disablecss} -->
+	<c:if test="#{!cc.attrs.disablecss}">
+		<link type="text/css" href="#{cc.attrs.theme}" rel="stylesheet" />
+		<script type="text/javascript"
+			src="#{facesContext.externalContext.requestContextPath}/imixs/jquery/jquery-ui-1.10.0.custom.min.js"></script>
+	</c:if>
+
+	<!-- Disable jquery fileupload plugin -->
+	<c:if test="#{!cc.attrs.disablefileupload}">
+		<script type="text/javascript"
+			src="#{facesContext.externalContext.requestContextPath}/imixs/jquery/jquery.iframe-transport.js"></script>
+		<script type="text/javascript"
+			src="#{facesContext.externalContext.requestContextPath}/imixs/jquery/jquery.fileupload.js"></script>
+	</c:if>
+
+
+	<script type="text/javascript"
+		src="#{facesContext.externalContext.requestContextPath}/imixs/imixs-faces.js?build=#{cc.attrs.build}"></script>
+
+	<!--  Init script -->
+	<script type="text/javascript">
+		/*<![CDATA[*/
+		           
+		var disablecss=#{cc.attrs.disablecss};
+
+		$(document)
+				.ready(
+						function() {
+							
+							if (!disablecss) {
+								setDateFormat('#{cc.attrs.dateformat}');
+								$(this).imixsInitFileUpload();
+								$(this).imixsLayout();
+	
+								$("span.imixs-tooltip").layoutImixsTooltip();
+	
+							}
+						});
+
+		/*]]>*/
+	</script>
+
+
+</cc:implementation>
+
+
+
+</html>
+
+
